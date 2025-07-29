@@ -1,0 +1,78 @@
+# NOTES
+# 'text' tells git to convert EOL to LF on stage/commit, and back to OS-specific EOL on checkout
+# 'text=auto' changes text files, but not binary files (some Unity files are always binary, like terrain .asset)
+# The common global rule '* text=auto' is NOT used as it sometimes incorrectly identifies binary files as text
+
+#! Text
+*.txt               text=auto eol=lf
+*.json              text=auto eol=lf
+*.xml               text=auto eol=lf
+*.XML               text=auto eol=lf
+
+# Unity
+*.cs                text diff=csharp
+*.cginc             text
+*.shader            text
+*.hlsl              text
+
+# Unity YAML
+*.mat               text=auto merge=unityyamlmerge eol=lf
+*.anim              text=auto merge=unityyamlmerge eol=lf
+*.unity             text=auto merge=unityyamlmerge eol=lf
+*.prefab            text=auto merge=unityyamlmerge eol=lf
+*.asset             text=auto merge=unityyamlmerge eol=lf
+*.meta              text=auto merge=unityyamlmerge eol=lf
+*.controller        text=auto merge=unityyamlmerge eol=lf
+
+# Godot
+*.gd                text=auto eol=lf
+*.tscn              text=auto eol=lf
+*.tres              text=auto eol=lf
+*.import            text=auto eol=lf
+*.godot             text=auto eol=lf
+*.cfg               text=auto eol=lf
+
+#! LFS
+*.psd               filter=lfs diff=lfs merge=lfs -text
+*.png               filter=lfs diff=lfs merge=lfs -text
+*.jpg               filter=lfs diff=lfs merge=lfs -text
+*.jpeg              filter=lfs diff=lfs merge=lfs -text
+*.zip               filter=lfs diff=lfs merge=lfs -text
+*.a                 filter=lfs diff=lfs merge=lfs -text
+*.gz                filter=lfs diff=lfs merge=lfs -text
+*.wav               filter=lfs diff=lfs merge=lfs -text
+*.mp3               filter=lfs diff=lfs merge=lfs -text
+*.fbx               filter=lfs diff=lfs merge=lfs -text
+*.FBX               filter=lfs diff=lfs merge=lfs -text
+*.exr               filter=lfs diff=lfs merge=lfs -text
+*.tga               filter=lfs diff=lfs merge=lfs -text
+*.TGA               filter=lfs diff=lfs merge=lfs -text
+*.tif               filter=lfs diff=lfs merge=lfs -text
+*.dll               filter=lfs diff=lfs merge=lfs -text
+*.so                filter=lfs diff=lfs merge=lfs -text
+
+*.exe               filter=lfs diff=lfs merge=lfs -text
+editor/mac/godot_macos_editor.app/Contents/MacOS/*               filter=lfs diff=lfs merge=lfs -text
+
+# Unity LFS
+*.unity3d           filter=lfs diff=lfs merge=lfs -text
+*.anim              filter=lfs diff=lfs merge=lfs -text
+
+# Godot LFS
+*.res               filter=lfs diff=lfs merge=lfs -text
+*.dylib             filter=lfs diff=lfs merge=lfs -text
+*.pck               filter=lfs diff=lfs merge=lfs -text
+*.wasm              filter=lfs diff=lfs merge=lfs -text
+*.glb              filter=lfs diff=lfs merge=lfs -text
+*.gltf             filter=lfs diff=lfs merge=lfs -text
+*.gltf2            filter=lfs diff=lfs merge=lfs -text
+
+
+# OpenCV
+*.onnx              filter=lfs diff=lfs merge=lfs -text
+*.caffemodel        filter=lfs diff=lfs merge=lfs -text
+*.yaml              filter=lfs diff=lfs merge=lfs -text
+*.pdf               filter=lfs diff=lfs merge=lfs -text
+*.dat               filter=lfs diff=lfs merge=lfs -text
+*.mjpeg             filter=lfs diff=lfs merge=lfs -text
+*.weights           filter=lfs diff=lfs merge=lfs -text
